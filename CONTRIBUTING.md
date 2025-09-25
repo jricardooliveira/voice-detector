@@ -14,7 +14,7 @@ Thank you for your interest in contributing to Voice Detector! This document pro
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/voice-detector.git
+   git clone https://github.com/jricardooliveira/voice-detector.git
    cd voice-detector
    ```
 

@@ -14,12 +14,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="voice-detector",
     version="1.0.0",
-    author="Your Name",
+    author="João Ricardo Oliveira",
     author_email="jricardooliveira@gmail.com",
     description="A voice activity detection tool for analyzing audio recordings",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/voice-detector",
+    url="https://github.com/jricardooliveira/voice-detector",
     py_modules=["voice_detector"],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
@@ -43,7 +43,7 @@ setup(
     },
     keywords="voice detection, audio analysis, webrtc, vad, call center, quality monitoring",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/voice-detector/issues",
-        "Source": "https://github.com/yourusername/voice-detector",
+        "Bug Reports": "https://github.com/jricardooliveira/voice-detector/issues",
+        "Source": "https://github.com/jricardooliveira/voice-detector",
     },
 )

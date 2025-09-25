@@ -20,7 +20,7 @@ A powerful voice activity detection tool for analyzing audio recordings using Go
 ### Docker (Recommended)
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/voice-detector.git
+git clone https://github.com/jricardooliveira/voice-detector.git
 cd voice-detector
 
 # Build the Docker image
@@ -30,7 +30,7 @@ docker build -t voice-detect .
 ### Local Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/voice-detector.git
+git clone https://github.com/jricardooliveira/voice-detector.git
 cd voice-detector
 
 # Create virtual environment
@@ -185,9 +185,9 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 ## Support
 
 - 📖 **Documentation**: Check this README and [CONTRIBUTING.md](CONTRIBUTING.md)
-- 🐛 **Bug Reports**: [Open an issue](https://github.com/yourusername/voice-detector/issues)
-- 💡 **Feature Requests**: [Open an issue](https://github.com/yourusername/voice-detector/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/voice-detector/discussions)
+- 🐛 **Bug Reports**: [Open an issue](https://github.com/jricardooliveira/voice-detector/issues)
+- 💡 **Feature Requests**: [Open an issue](https://github.com/jricardooliveira/voice-detector/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/jricardooliveira/voice-detector/discussions)
 
 ## License
 
