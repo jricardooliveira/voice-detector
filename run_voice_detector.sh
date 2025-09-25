@@ -5,7 +5,7 @@
 
 # Default values
 AUDIO_DIR="${1:-./audio}"
-DOCKER_IMAGE="voice-detect"
+DOCKER_IMAGE="jricardooliveira/voice-detector:latest"
 SHIFT_ARGS=1
 
 # Check if Docker is running

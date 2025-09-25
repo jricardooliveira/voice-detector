@@ -183,16 +183,16 @@ def process_folder(folder_path, threshold, frame_ms, vad_mode, json_output=False
 # ---------- Main ----------
 def main():
     parser = argparse.ArgumentParser(
-        description="Detetar gravações sem som por perna (webrtcvad)."
+        description="Voice activity detection tool for analyzing audio recordings using Google's WebRTC VAD."
     )
-    parser.add_argument("input", help="Ficheiro de áudio ou pasta com ficheiros de áudio (WAV/MP3/… com 1 ou 2 canais).")
+    parser.add_argument("input", help="Audio file or folder with audio files (WAV/MP3/M4A/AAC/FLAC/OGG with 1 or 2 channels).")
     parser.add_argument("--threshold", type=float, default=0.10,
-                        help="Razão mínima de frames com voz por perna (default: 0.10 = 10%).")
+                        help="Minimum voice activity ratio per leg (default: 0.10 = 10 percent).")
     parser.add_argument("--frame-ms", type=int, default=30,
-                        help="Duração do frame em ms (10/20/30; default: 30).")
+                        help="Frame duration in ms (10/20/30, default: 30).")
     parser.add_argument("--vad-mode", type=int, default=2, choices=[0,1,2,3],
-                        help="Agressividade do VAD (0 menos agressivo, 3 mais agressivo).")
-    parser.add_argument("--json", action="store_true", help="Output em JSON.")
+                        help="VAD aggressiveness (0 least aggressive, 3 most aggressive).")
+    parser.add_argument("--json", action="store_true", help="Output in JSON format.")
     args = parser.parse_args()
 
     # Check if input is a file or folder

@@ -3,6 +3,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Docker Hub](https://img.shields.io/badge/docker%20hub-jricardooliveira%2Fvoice--detector-blue)](https://hub.docker.com/r/jricardooliveira/voice-detector)
 
 A powerful voice activity detection tool for analyzing audio recordings using Google's WebRTC VAD. Perfect for call center quality monitoring, compliance checking, and automated audio quality assurance.
 
@@ -18,6 +19,17 @@ A powerful voice activity detection tool for analyzing audio recordings using Go
 ## Installation
 
 ### Docker (Recommended)
+
+#### Option 1: Pull from Docker Hub (Easiest)
+```bash
+# Pull the pre-built image from Docker Hub
+docker pull jricardooliveira/voice-detector:latest
+
+# Run directly
+docker run --rm -v /path/to/audio:/audio jricardooliveira/voice-detector:latest
+```
+
+#### Option 2: Build from source
 ```bash
 # Clone the repository
 git clone https://github.com/jricardooliveira/voice-detector.git
@@ -48,7 +60,19 @@ pip install -r requirements.txt
 
 ## Quick Start
 
-### Option 1: Use the helper script (Recommended)
+### Option 1: Docker Hub (Easiest)
+```bash
+# Pull and run in one command
+docker run --rm -v "/path/to/your/audio/folder":/audio jricardooliveira/voice-detector:latest
+
+# With JSON output
+docker run --rm -v "/path/to/your/audio/folder":/audio jricardooliveira/voice-detector:latest --json
+
+# With custom threshold
+docker run --rm -v "/path/to/your/audio/folder":/audio jricardooliveira/voice-detector:latest --threshold 0.05
+```
+
+### Option 2: Use the helper script (Local build)
 ```bash
 # Make the script executable (first time only)
 chmod +x run_voice_detector.sh
@@ -63,7 +87,7 @@ chmod +x run_voice_detector.sh
 ./run_voice_detector.sh "/path/to/your/audio/folder" --threshold 0.05
 ```
 
-### Option 2: Direct Docker commands
+### Option 3: Direct Docker commands
 ```bash
 # Build the container (first time only)
 docker build -t voice-detect .
