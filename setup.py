@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """
 Setup script for Voice Detector
+
+System Requirements:
+- Python 3.8+
+- FFmpeg (required for audio processing)
+  - macOS: brew install ffmpeg
+  - Ubuntu: sudo apt-get install ffmpeg
+  - Windows: Download from https://ffmpeg.org/download.html
 """
 
 from setuptools import setup, find_packages

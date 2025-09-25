@@ -7,6 +7,18 @@
 
 A powerful voice activity detection tool for analyzing audio recordings using Google's WebRTC VAD. Perfect for call center quality monitoring, compliance checking, and automated audio quality assurance.
 
+## System Requirements
+
+### For Docker Usage (Recommended)
+- Docker installed on your system
+- No additional dependencies required
+
+### For Local Installation
+- **Python 3.8+**
+- **FFmpeg** (required for audio processing)
+- **webrtcvad** Python package
+- **setuptools** Python package
+
 ## Features
 
 - 🎯 **Accurate Voice Detection** - Uses Google's WebRTC VAD algorithm
@@ -40,6 +52,33 @@ docker build -t voice-detect .
 ```
 
 ### Local Installation
+
+#### Prerequisites
+**FFmpeg is required** for audio processing. Install it first:
+
+**macOS:**
+```bash
+brew install ffmpeg
+```
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get update
+sudo apt-get install ffmpeg
+```
+
+**Windows:**
+1. Download FFmpeg from https://ffmpeg.org/download.html
+2. Extract and add to your PATH
+3. Or use chocolatey: `choco install ffmpeg`
+
+**CentOS/RHEL:**
+```bash
+sudo yum install epel-release
+sudo yum install ffmpeg
+```
+
+#### Python Installation
 ```bash
 # Clone the repository
 git clone https://github.com/jricardooliveira/voice-detector.git
@@ -49,13 +88,11 @@ cd voice-detector
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+# Install Python dependencies
 pip install -r requirements.txt
 
-# Install FFmpeg (required for audio processing)
-# macOS: brew install ffmpeg
-# Ubuntu: sudo apt-get install ffmpeg
-# Windows: Download from https://ffmpeg.org/download.html
+# Verify installation
+python voice_detector.py --help
 ```
 
 ## Quick Start
@@ -205,6 +242,27 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## Troubleshooting
+
+### Common Issues
+
+**"FFmpeg not found" error:**
+- Make sure FFmpeg is installed and in your PATH
+- Test with: `ffmpeg -version`
+- On Windows, ensure FFmpeg is added to your system PATH
+
+**"webrtcvad module not found" error:**
+- Make sure you're in the virtual environment: `source venv/bin/activate`
+- Reinstall dependencies: `pip install -r requirements.txt`
+
+**"No audio files found" message:**
+- Check that your audio directory contains supported formats (MP3, WAV, M4A, AAC, FLAC, OGG)
+- Ensure the directory path is correct and accessible
+
+**Docker permission issues:**
+- On Linux/macOS, you might need to add your user to the docker group
+- Try running with `sudo` if necessary
 
 ## Support
 

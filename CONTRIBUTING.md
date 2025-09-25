@@ -8,7 +8,31 @@ Thank you for your interest in contributing to Voice Detector! This document pro
 
 - Python 3.8 or higher
 - Docker (for containerized development)
-- FFmpeg (for audio processing)
+- **FFmpeg (required for audio processing)**
+
+#### Installing FFmpeg
+
+**macOS:**
+```bash
+brew install ffmpeg
+```
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get update
+sudo apt-get install ffmpeg
+```
+
+**Windows:**
+1. Download FFmpeg from https://ffmpeg.org/download.html
+2. Extract and add to your PATH
+3. Or use chocolatey: `choco install ffmpeg`
+
+**CentOS/RHEL:**
+```bash
+sudo yum install epel-release
+sudo yum install ffmpeg
+```
 
 ### Development Setup
 
@@ -29,10 +53,11 @@ Thank you for your interest in contributing to Voice Detector! This document pro
    pip install -r requirements.txt
    ```
 
-4. **Install FFmpeg**
-   - **macOS**: `brew install ffmpeg`
-   - **Ubuntu/Debian**: `sudo apt-get install ffmpeg`
-   - **Windows**: Download from https://ffmpeg.org/download.html
+4. **Verify FFmpeg installation**
+   ```bash
+   ffmpeg -version
+   ```
+   You should see FFmpeg version information. If not, install FFmpeg using the instructions above.
 
 ## Development Workflow
 
